@@ -55,4 +55,13 @@ extents = Vector2( 8, 8 )
 "shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
+4/name = "espacioPersonaje"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 16, 16 )
+4/is_autotile = false
+4/occluder_offset = Vector2( 8, 8 )
+4/navigation_offset = Vector2( 8, 8 )
+4/shapes = [  ]
 
