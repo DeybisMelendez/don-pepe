@@ -11,3 +11,7 @@ func _ready():
 			var nCaja = caja.instance()
 			nCaja.global_position = Vector2(terreno[i].x ,  terreno[i].y) * 16
 			add_child(nCaja)
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().reload_current_scene()

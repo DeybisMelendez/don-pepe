@@ -20,10 +20,11 @@ func _ready():
 	yield($anim,"animation_finished")
 	for i in distancia:
 		for a in dir.size():
-			var posMap = pos/16 + dir[a] * (i + 1)
-			if tilemap.get_cellv(posMap) == 0 or tilemap.get_cellv(posMap) == 4:
-				var nExplosion = explosion.instance()
-				nExplosion.global_position = offset + (dir[a] * tileTam * (i + 1))
-				add_child(nExplosion)
-#			else: # Si quito esto no causa error pero atraviesa paredes
-#				dir.remove(a)
+			if dir[a] != Vector2(0,0):
+				var posMap = pos/16 + dir[a] * (i + 1)
+				if tilemap.get_cellv(posMap) == 0 or tilemap.get_cellv(posMap) == 4:
+					var nExplosion = explosion.instance()
+					nExplosion.global_position = offset + (dir[a] * tileTam * (i + 1))
+					add_child(nExplosion)
+				else:
+					dir[a] = Vector2(0,0)

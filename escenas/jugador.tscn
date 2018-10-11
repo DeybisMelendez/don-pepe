@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/jugador2/j2.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://sprites/jugador1/j1.tres" type="SpriteFrames" id=4]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 7.0
@@ -28,6 +28,6 @@ animation = "caminarAbajo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 

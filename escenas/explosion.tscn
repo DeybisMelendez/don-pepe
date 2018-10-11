@@ -20,7 +20,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 8 )
+extents = Vector2( 7, 7 )
 
 [node name="explosion" type="Area2D"]
 
@@ -41,5 +41,7 @@ animation = "explotar"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_explosion_body_entered"]
 
 

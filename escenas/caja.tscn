@@ -7,7 +7,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[node name="caja" type="StaticBody2D"]
+[node name="caja" type="StaticBody2D" groups=[
+"caja",
+]]
 
 input_pickable = false
 collision_layer = 1
