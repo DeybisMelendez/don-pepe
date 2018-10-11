@@ -22,15 +22,15 @@ func _physics_process(delta):
 		$anim.play("caminarArriba")
 	elif Input.is_action_pressed("j"+idJugador+"Der"):
 		move_and_slide(Vector2(VEL,0))
-		$anim.play("caminarDerecha")
-		$anim.flip_h = false
+		$anim.play("caminarIzquierda")
+		$anim.flip_h = true
 	elif Input.is_action_pressed("j"+idJugador+"Izq"):
 		move_and_slide(Vector2(-VEL,0))
-		$anim.play("caminarDerecha")
-		$anim.flip_h = true
+		$anim.play("caminarIzquierda")
+		$anim.flip_h = false
 	else:
 		$anim.stop()
-		$anim.set_frame(0)
+		$anim.set_frame(1)
 	if Input.is_action_just_pressed("j"+idJugador+"Bomba") and colocarBomba:
 		var nBomba = bomba.instance()
 		nBomba.global_position = mapPos * 16

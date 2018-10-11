@@ -1,31 +1,32 @@
 [gd_resource type="SpriteFrames" load_steps=10 format=2]
 
-[ext_resource path="res://sprites/jugador1/7 - man.png" type="Texture" id=1]
-[ext_resource path="res://sprites/jugador1/8 - man.png" type="Texture" id=2]
-[ext_resource path="res://sprites/jugador1/9 - man.png" type="Texture" id=3]
-[ext_resource path="res://sprites/jugador1/1 - man.png" type="Texture" id=4]
-[ext_resource path="res://sprites/jugador1/2 - man.png" type="Texture" id=5]
-[ext_resource path="res://sprites/jugador1/3 - man.png" type="Texture" id=6]
-[ext_resource path="res://sprites/jugador1/4 - man.png" type="Texture" id=7]
-[ext_resource path="res://sprites/jugador1/5 - man.png" type="Texture" id=8]
-[ext_resource path="res://sprites/jugador1/6 - man.png" type="Texture" id=9]
+[ext_resource path="res://sprites/jugador1/sprite_03.png" type="Texture" id=1]
+[ext_resource path="res://sprites/jugador1/sprite_04.png" type="Texture" id=2]
+[ext_resource path="res://sprites/jugador1/sprite_05.png" type="Texture" id=3]
+[ext_resource path="res://sprites/jugador1/sprite_06.png" type="Texture" id=4]
+[ext_resource path="res://sprites/jugador1/sprite_07.png" type="Texture" id=5]
+[ext_resource path="res://sprites/jugador1/sprite_08.png" type="Texture" id=6]
+[ext_resource path="res://sprites/jugador1/sprite_00.png" type="Texture" id=7]
+[ext_resource path="res://sprites/jugador1/sprite_01.png" type="Texture" id=8]
+[ext_resource path="res://sprites/jugador1/sprite_02.png" type="Texture" id=9]
+
 
 [resource]
 
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "caminarIzquierda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "caminarArriba",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "caminarAbajo",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "caminarDerecha",
 "speed": 5.0
 } ]
 

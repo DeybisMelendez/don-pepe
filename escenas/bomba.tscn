@@ -21,7 +21,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[node name="bomba" type="Area2D" index="0"]
+[node name="bomba" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://sprites/Tiles.png" type="Texture" id=1]
+[ext_resource path="res://tileset/tileset Don Pepe.png" type="Texture" id=1]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,40 +41,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="Sprite3" type="Sprite" parent="." index="2"]
-
-position = Vector2( 32, 0 )
-texture = ExtResource( 1 )
-vframes = 2
-hframes = 2
-frame = 2
-_sections_unfolded = [ "Animation", "Offset" ]
-
-[node name="Sprite4" type="Sprite" parent="." index="3"]
-
-editor/display_folded = true
-position = Vector2( 16, 16 )
-texture = ExtResource( 1 )
-vframes = 2
-hframes = 2
-frame = 3
-_sections_unfolded = [ "Animation", "Offset" ]
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite4" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D2" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="espacioPersonaje" type="Sprite" parent="." index="4"]
+[node name="espacioPersonaje" type="Sprite" parent="." index="2"]
 
 position = Vector2( 0, 16 )
 texture = ExtResource( 1 )
