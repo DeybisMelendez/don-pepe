@@ -7,7 +7,13 @@ var directions = [
 	Vector2(0, 1)
 ]
 
+var old_direction
 var current_direction
+
+# Vertical change direction
+var v_keep_direction = true
+# Horizontal change direction
+var h_keep_direction = true
 
 # Kinematic collider
 var k_collider
@@ -16,15 +22,23 @@ func _ready():
 	randomize()
 	
 	current_direction = random_direction()
+	old_direction = current_direction
 	
-	
-#	add_collision_exception_with(
+	for enemy in get_tree().get_nodes_in_group("enemy"):
+		add_collision_exception_with(enemy)
 	
 func _physics_process(delta):
+#	current_direction = random_direction()
+
+	if current_direction == Vector2():
+		current_direction = random_direction()
+
 	if k_collider != null:
 		current_direction = random_direction()
 	
 	k_collider = move_and_collide(current_direction)
+	
+	
 
 # Elije una dirección a la cual moverse y la devuelve en
 # un Vector2
@@ -37,7 +51,7 @@ func random_direction():
 			posible_directions.append(directions[i])
 	
 	if posible_directions.size() > 0:
-		return posible_directions[int(round(rand_range(0, posible_directions.size() - 1)))]
+		var dir = posible_directions[int(round(rand_range(0, posible_directions.size() - 1)))]
+		return dir
 	else:
-		print("00")
 		return Vector2(0,0)
