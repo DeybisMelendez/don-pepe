@@ -1,0 +1,32 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://escenas/GenericEnemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/BombEnemy.gd" type="Script" id=2]
+[ext_resource path="res://sprites/bomba/bomb_0.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bomba/bomb_1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/bomba/bomb_2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/bomba/bomb_3.png" type="Texture" id=6]
+[ext_resource path="res://sprites/bomba/bomb_4.png" type="Texture" id=7]
+[ext_resource path="res://sprites/bomba/bomb_5.png" type="Texture" id=8]
+[ext_resource path="res://sprites/bomba/bomb_6.png" type="Texture" id=9]
+[ext_resource path="res://sprites/bomba/bomb_7.png" type="Texture" id=10]
+[ext_resource path="res://sprites/bomba/bomb_8.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="BombEnemy" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="1"]
+
+frames = SubResource( 1 )
+
+

@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/enemigo.gd" type="Script" id=1]
-[ext_resource path="res://sprites/bomba/bomb_1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/bomba/bomb_4.png" type="Texture" id=3]
-[ext_resource path="res://sprites/bomba/bomb_7.png" type="Texture" id=4]
+[ext_resource path="res://sprites/bomba/bomb_0.png" type="Texture" id=2]
+[ext_resource path="res://sprites/bomba/bomb_3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bomba/bomb_6.png" type="Texture" id=4]
 [ext_resource path="res://sprites/bomba/bomb_2.png" type="Texture" id=5]
 [ext_resource path="res://sprites/bomba/bomb_5.png" type="Texture" id=6]
 [ext_resource path="res://sprites/bomba/bomb_8.png" type="Texture" id=7]
-[ext_resource path="res://sprites/bomba/bomb_0.png" type="Texture" id=8]
-[ext_resource path="res://sprites/bomba/bomb_3.png" type="Texture" id=9]
-[ext_resource path="res://sprites/bomba/bomb_6.png" type="Texture" id=10]
+[ext_resource path="res://sprites/bomba/bomb_1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/bomba/bomb_4.png" type="Texture" id=9]
+[ext_resource path="res://sprites/bomba/bomb_7.png" type="Texture" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -21,7 +21,7 @@ radius = 7.0
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "izquierda",
+"name": "arriba",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ) ],
@@ -31,11 +31,11 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "arriba",
+"name": "izquierda",
 "speed": 5.0
 } ]
 
-[node name="enemigo" type="KinematicBody2D" index="0"]
+[node name="enemigo" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
