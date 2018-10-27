@@ -17,3 +17,5 @@ func _on_explosion_body_entered(body):
 			get_parent().get_parent().add_child(p)
 	elif body.is_in_group("jugador"):
 		body.morir()
+	elif body.is_in_group("enemy"):
+		body.dead()

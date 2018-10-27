@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var can_move = false
+
 var directions = [
 	Vector2(-1, 0),
 	Vector2(0, -1),
@@ -28,6 +30,9 @@ func _ready():
 		add_collision_exception_with(enemy)
 	
 func _physics_process(delta):
+	if not can_move:
+		return
+	
 	if current_direction == Vector2():
 		current_direction = random_direction()
 
@@ -51,3 +56,16 @@ func random_direction():
 		return dir
 	else:
 		return Vector2(0,0)
+
+func dead():
+	$Anim.play("dead")
+
+func _on_Anim_animation_finished(anim_name):
+	if anim_name == "show":
+		can_move = true
+	elif anim_name == "dead":
+		queue_free()
+
+func _on_Anim_animation_started(anim_name):
+	if anim_name == "dead":
+		can_move = false

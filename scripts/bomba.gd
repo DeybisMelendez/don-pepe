@@ -44,3 +44,4 @@ func _ready():
 func _on_bomba_area_entered(area):
 	if area.is_in_group("explosion"):
 		$anim.set_frame(10)
+		
