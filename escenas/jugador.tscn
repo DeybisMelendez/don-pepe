@@ -10,7 +10,9 @@
 custom_solver_bias = 0.0
 radius = 7.0
 
-[node name="jugador" type="KinematicBody2D"]
+[node name="jugador" type="KinematicBody2D" groups=[
+"jugador",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -29,5 +31,12 @@ animation = "caminarAbajo"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 
