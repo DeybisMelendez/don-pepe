@@ -28,8 +28,6 @@ func _ready():
 		add_collision_exception_with(enemy)
 	
 func _physics_process(delta):
-#	current_direction = random_direction()
-
 	if current_direction == Vector2():
 		current_direction = random_direction()
 
@@ -38,8 +36,6 @@ func _physics_process(delta):
 	
 	k_collider = move_and_collide(current_direction)
 	
-	
-
 # Elije una dirección a la cual moverse y la devuelve en
 # un Vector2
 func random_direction():

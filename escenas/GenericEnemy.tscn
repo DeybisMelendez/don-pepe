@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 7, 7 )
 
-[node name="GenericEnemy" type="KinematicBody2D" index="0" groups=[
+[node name="GenericEnemy" type="KinematicBody2D" groups=[
 "enemy",
 ]]
 
