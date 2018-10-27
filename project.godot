@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="don-pepe"
-run/main_scene="res://escenas/juego.tscn"
+run/main_scene="res://escenas/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
