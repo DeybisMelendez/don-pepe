@@ -1,6 +1,7 @@
 extends TileMap
 
 const idTerreno = 0
+export var multiplayer = false
 export (PackedScene) var caja
 export (PackedScene) var enemigo
 
@@ -12,7 +13,7 @@ func _ready():
 			var nCaja = caja.instance()
 			nCaja.global_position = Vector2(terreno[i].x ,  terreno[i].y) * 16
 			add_child(nCaja)
-		else:
+		elif !multiplayer:
 			if randi()%10 == 0:
 				var nE = enemigo.instance()
 				nE.global_position = Vector2(terreno[i].x,  terreno[i].y) * 16

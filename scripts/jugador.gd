@@ -12,6 +12,7 @@ var bombas = null
 var bombaCant = 1
 var muerto = false
 var distancia = 5
+onready var posInicial = global_position
 
 func _ready():
 	if idJugador == "2":
@@ -63,7 +64,11 @@ func morir():
 	$anim.play("morir")
 	$Timer.start()
 	yield($Timer,"timeout")
-	queue_free()
+	global_position = posInicial
+	muerto = false
+	$anim.play("caminarAbajo")
+	$anim.set_frame(1)
+	colocarBomba = true
 
 func powerUp(n): # 0 = B, 1 = L, 2 = P
 	match n:
