@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const VEL = 70
+var vel = 70
 var vidas = 3
 var colocarBomba = true
 export (PackedScene) var bomba
@@ -11,7 +11,7 @@ var tilemap = null
 var bombas = null
 var bombaCant = 1
 var muerto = false
-var distancia = 5
+var distancia = 1
 onready var posInicial = global_position
 
 func _ready():
@@ -28,17 +28,17 @@ func _physics_process(delta):
 		tilemap = get_parent().get_node("TileMap")
 		bombas = get_tree().get_nodes_in_group("bomba")
 		if Input.is_action_pressed("j"+idJugador+"Aba"):
-			move_and_slide(Vector2(0,VEL))
+			move_and_slide(Vector2(0,vel))
 			$anim.play("caminarAbajo")
 		elif Input.is_action_pressed("j"+idJugador+"Arr"):
-			move_and_slide(Vector2(0,-VEL))
+			move_and_slide(Vector2(0,-vel))
 			$anim.play("caminarArriba")
 		elif Input.is_action_pressed("j"+idJugador+"Der"):
-			move_and_slide(Vector2(VEL,0))
+			move_and_slide(Vector2(vel,0))
 			$anim.play("caminarIzquierda")
 			$anim.flip_h = true
 		elif Input.is_action_pressed("j"+idJugador+"Izq"):
-			move_and_slide(Vector2(-VEL,0))
+			move_and_slide(Vector2(-vel,0))
 			$anim.play("caminarIzquierda")
 			$anim.flip_h = false
 		else:
