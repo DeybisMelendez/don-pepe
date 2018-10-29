@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var can_move = false
+var speed = 0.5
 
 var directions = [
 	Vector2(-1, 0),
@@ -22,6 +23,7 @@ var k_collider
 
 func _ready():
 	randomize()
+	$Sprite.play("default")
 	
 	current_direction = random_direction()
 	old_direction = current_direction
@@ -39,7 +41,7 @@ func _physics_process(delta):
 	if k_collider != null:
 		current_direction = random_direction()
 	
-	k_collider = move_and_collide(current_direction)
+	k_collider = move_and_collide(current_direction * speed)
 	
 # Elije una dirección a la cual moverse y la devuelve en
 # un Vector2

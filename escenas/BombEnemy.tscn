@@ -21,7 +21,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="BombEnemy" instance=ExtResource( 1 )]
+[node name="BombEnemy" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -29,8 +29,6 @@ script = ExtResource( 2 )
 
 scale = Vector2( 1e-05, 1e-05 )
 frames = SubResource( 1 )
-frame = 5
-playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 

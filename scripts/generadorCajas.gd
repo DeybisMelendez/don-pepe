@@ -4,6 +4,7 @@ const idTerreno = 0
 export var multiplayer = false
 export (PackedScene) var caja
 export (PackedScene) var enemigo
+export (PackedScene) var ghost_enemy
 
 func _ready():
 	randomize()
@@ -15,7 +16,13 @@ func _ready():
 			add_child(nCaja)
 		elif !multiplayer:
 			if randi()%10 == 0:
-				var nE = enemigo.instance()
+				var nE 
+				
+				if randi() % 10 == 0:
+					nE = ghost_enemy.instance()
+				else:
+					nE = enemigo.instance()
+				
 				nE.global_position = Vector2(terreno[i].x,  terreno[i].y) * 16
 				nE.global_position.x += 8
 				nE.global_position.y += 8
