@@ -23,9 +23,9 @@ func _ready():
 				else:
 					nE = enemigo.instance()
 				
-				nE.global_position = Vector2(terreno[i].x,  terreno[i].y) * 16
-				nE.global_position.x += 8
-				nE.global_position.y += 8
+				nE.global_position = Vector2(terreno[i].x + 0.5,  terreno[i].y + 0.5) * 16
+#				nE.global_position.x += 8
+#				nE.global_position.y += 8
 				add_child(nE)
 
 func _input(event):

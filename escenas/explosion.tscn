@@ -23,7 +23,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 7 )
 
-[node name="explosion" type="Area2D" groups=[
+[node name="explosion" type="Area2D" index="0" groups=[
 "explosion",
 ]]
 

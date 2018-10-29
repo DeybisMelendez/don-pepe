@@ -60,15 +60,16 @@ func _physics_process(delta):
 
 func morir():
 	muerto = true
-	vidas -= 1
 	$anim.play("morir")
-	$Timer.start()
-	yield($Timer,"timeout")
-	global_position = posInicial
-	muerto = false
-	$anim.play("caminarAbajo")
-	$anim.set_frame(1)
-	colocarBomba = true
+	if vidas > 0:
+		vidas -= 1
+		$Timer.start()
+		yield($Timer,"timeout")
+		global_position = posInicial
+		muerto = false
+		$anim.play("caminarAbajo")
+		$anim.set_frame(1)
+		colocarBomba = true
 
 func powerUp(n): # 0 = B, 1 = L, 2 = P
 	match n:
