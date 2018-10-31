@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 7.0
 
-[node name="jugador" type="KinematicBody2D" groups=[
+[node name="jugador" type="KinematicBody2D" index="0" groups=[
 "jugador",
 ]]
 
@@ -25,8 +25,10 @@ j2 = ExtResource( 3 )
 
 [node name="anim" type="AnimatedSprite" parent="." index="0"]
 
+rotation = 18.8496
 frames = ExtResource( 4 )
 animation = "caminarAbajo"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 

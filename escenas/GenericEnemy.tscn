@@ -57,7 +57,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
 }
 
-[node name="GenericEnemy" type="KinematicBody2D" index="0" groups=[
+[node name="GenericEnemy" type="KinematicBody2D" groups=[
 "enemy",
 ]]
 

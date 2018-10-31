@@ -61,12 +61,14 @@ func _physics_process(delta):
 
 func morir():
 	muerto = true
+	
 	$anim.play("morir")
+	
 	if vidas > 0:
 		vidas -= 1
+		global_position = posInicial
 		$Timer.start()
 		yield($Timer,"timeout")
-		global_position = posInicial
 		muerto = false
 		$anim.play("caminarAbajo")
 		$anim.set_frame(1)
