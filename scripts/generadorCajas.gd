@@ -15,10 +15,10 @@ func _ready():
 			nCaja.global_position = Vector2(terreno[i].x ,  terreno[i].y) * 16
 			add_child(nCaja)
 		elif !multiplayer:
-			if randi()%10 == 0:
+			if randi()%7 == 0:
 				var nE 
 				
-				if randi() % 10 == 0:
+				if randi() % 5 == 0:
 					nE = ghost_enemy.instance()
 				else:
 					nE = enemigo.instance()

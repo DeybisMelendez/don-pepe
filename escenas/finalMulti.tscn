@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/finalMulti.gd" type="Script" id=1]
 [ext_resource path="res://fuente/16.tres" type="DynamicFont" id=2]
+[ext_resource path="res://sonidos/BeepBox-Song(1).wav" type="AudioStream" id=3]
 
-[node name="finalMulti" type="CenterContainer" index="0"]
+[node name="finalMulti" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -44,13 +45,13 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Timer" type="Timer" parent="." index="1"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
 
-process_mode = 1
-wait_time = 2.0
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

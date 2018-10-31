@@ -5,3 +5,4 @@ var vidas_j2 = 3
 var time = 0
 var score = 0
 var ganador = "Sorry"
+var stage = 1

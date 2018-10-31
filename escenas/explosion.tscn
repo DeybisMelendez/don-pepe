@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/explosion.gd" type="Script" id=1]
 [ext_resource path="res://escenas/powerUp.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://sprites/explosion/3.png" type="Texture" id=6]
 [ext_resource path="res://sprites/explosion/4.png" type="Texture" id=7]
 [ext_resource path="res://sprites/explosion/5.png" type="Texture" id=8]
+[ext_resource path="res://sonidos/explosion.wav" type="AudioStream" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -23,7 +24,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 7 )
 
-[node name="explosion" type="Area2D" index="0" groups=[
+[node name="explosion" type="Area2D" groups=[
 "explosion",
 ]]
 
@@ -45,6 +46,17 @@ animation = "explotar"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 9 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="." to="." method="_on_explosion_body_entered"]
 

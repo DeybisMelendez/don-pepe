@@ -26,7 +26,7 @@ func _physics_process(delta):
 		global.vidas_j2 = vidas
 	if !muerto:
 		tilemap = get_parent().get_node("TileMap")
-		bombas = get_tree().get_nodes_in_group("bomba")
+		bombas = get_tree().get_nodes_in_group(idJugador)
 		if Input.is_action_pressed("j"+idJugador+"Aba"):
 			move_and_slide(Vector2(0,vel))
 			$anim.play("caminarAbajo")
@@ -47,6 +47,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("j"+idJugador+"Bomba") and colocarBomba:
 			if bombas.size() < bombaCant:
 				var nBomba = bomba.instance()
+				nBomba.add_to_group(idJugador)
 				nBomba.global_position = tilemap.world_to_map(global_position) * 16
 				nBomba.distancia = distancia
 				get_parent().add_child(nBomba)

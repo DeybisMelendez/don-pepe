@@ -3,7 +3,7 @@ extends HBoxContainer
 var gameOver = load ("res://escenas/finalMulti.tscn")
 onready var jugadores = get_tree().get_nodes_in_group("jugador")
 func _ready():
-	global.time = 5
+	global.time = 300
 
 func _physics_process(delta):
 	$p1.set_text("P1 Left: " + str(global.vidas_j1))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scripts/generadorCajas.gd" type="Script" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://escenas/BombEnemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/GhostEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://escenas/jugador.tscn" type="PackedScene" id=6]
-[ext_resource path="res://escenas/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sonidos/Crazy.ogg" type="AudioStream" id=7]
+[ext_resource path="res://escenas/HUD.tscn" type="PackedScene" id=8]
 
 [node name="singleplayer" type="Node2D"]
 
@@ -71,6 +72,17 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Limit" ]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="jugador" index="4"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
 layer = 1
@@ -79,6 +91,6 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
+[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 8 )]
 
 

@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 7.0
 
-[node name="jugador" type="KinematicBody2D" groups=[
+[node name="jugador" type="KinematicBody2D" index="0" groups=[
 "jugador",
 ]]
 
