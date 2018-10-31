@@ -43,6 +43,9 @@ func _physics_process(delta):
 	
 	k_collider = move_and_collide(current_direction * speed)
 	
+	if k_collider != null and k_collider.collider.is_in_group("jugador"):
+		k_collider.collider.morir()
+	
 # Elije una dirección a la cual moverse y la devuelve en
 # un Vector2
 func random_direction():

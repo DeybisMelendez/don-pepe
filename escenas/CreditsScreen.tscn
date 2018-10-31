@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="CreditsScreen" type="Control" index="0"]
+[node name="CreditsScreen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
