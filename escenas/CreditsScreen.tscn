@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://escenas/CreditsScreen.gd" type="Script" id=1]
+[ext_resource path="res://fuente/32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fuente/04B_30__.TTF" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 10
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[node name="CreditsScreen" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Size Flags" ]
+
+[node name="Background" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.088974, 0.306274, 0.464844, 1 )
+
+[node name="Title" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 320.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.976562, 0.851989, 0.179291, 1 )
+text = "Credits"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Credits" type="RichTextLabel" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 320.0
+margin_bottom = 240.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+[color=red]MAIN PROGRAMER[/color]
+Deybis Melendez
+[url=https://opengameart.org/content/donde-pepe-y-los-globos-sprites][OGA_Sprites_GPL3.0][/url]
+[url=https://opengameart.org/content/stage-melody][OGA_FX_GPL3.0][/url]
+[url=https://opengameart.org/content/button-info][OGA_ButtonInfo_GPL3.0][/url]
+
+[color=red]SECOND PROGRAMER[/color]
+Matias Munoz Espinoza
+[url=https://opengameart.org/content/chiptune-loop-crazy][OGA_Music_CC0][/url]
+
+[color=red]Music Battle[/color]
+Gundatsch 
+[url=https://opengameart.org/content/raining-bits][OGA_Music_CC-BY-3.0][/url]
+[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "
+MAIN PROGRAMER
+Deybis Melendez
+[OGA_Sprites_GPL3.0]
+[OGA_FX_GPL3.0]
+[OGA_ButtonInfo_GPL3.0]
+
+SECOND PROGRAMER
+Matias Munoz Espinoza
+[OGA_Music_CC0]
+
+Music Battle
+Gundatsch 
+[OGA_Music_CC-BY-3.0]
+"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Mouse", "custom_fonts" ]
+
+[connection signal="gui_input" from="." to="." method="_on_CreditsScreen_gui_input"]
+
+[connection signal="meta_clicked" from="Credits" to="." method="_on_Credits_meta_clicked"]
+
+
