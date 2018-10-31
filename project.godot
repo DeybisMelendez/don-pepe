@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="don-pepe"
+config/name="Don Pepe y los globos"
 run/main_scene="res://escenas/menu.tscn"
 config/icon="res://sprites/bomba/bomb_0.png"
 
